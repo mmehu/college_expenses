@@ -11,23 +11,23 @@ if os.path.exists("expense.joblib"):
 # 2. Set up your Streamlit app
 def main():
     # (Optional) Set page title and favicon.
-    st.set_page_config(page_title="Hackathon Model Showcase", page_icon="🧊")
+    st.set_page_config(page_title="Expenses Predictor", page_icon="🤑")
 
     # (Optional) Set a sidebar for your app.
     with st.sidebar:
-        # st.image("IMAGE_PATH")
-        st.title("SIDE_BAR_TITLE")
+        st.image("side.jpg")
+        st.title("Our Menu")
         choice = st.radio(
             "Menu", ["Home", "Batch Prediction"])
         st.info(
-            "PROJECT_DESCRIPTION")
+            "Go to 'Batch Prediction' to upload a CSV file and see live predictions.")
     
     # Now lets add content to each sub-page of your site
     if choice == "Home":
         # Add a title and some text to the app:
-        st.title("Hackathon Model Showcase")
+        st.title("Our Monthly Expenses Predictor")
         st.write(
-            "Welcome to the Hackathon Model Showcase! Enter the necessary input and see live predictions.")
+            "Welcome to the Expenses Predictor! Enter the necessary input and see live predictions. This project is about predicting the monthly expenses of a student based on his/her lifestyle. The data was then cleaned and preprocessed using Python. The data was then used to train a Linear Regression model. The model was then deployed using Streamlit.")
 
     elif choice == "Batch Prediction":
         # Add a title and some text to the app:
