@@ -64,7 +64,7 @@ def _singlePredict(input_text):
     # For example:
     # Call your model to make predictions on the input_text
     # For example:
-    prediction = model.predict([[float(input_text)]])
+    prediction = model2.predict([[float(input_text)]])
 
     # Make sure to return the prediction result
     return prediction[0][0]
