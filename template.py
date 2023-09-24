@@ -5,7 +5,7 @@ import os
 
 # 1. Import your model and any necessary dependencies here
 if os.path.exists("expenses.joblib"):
-    model = joblib.load("expenses.joblib")
+    model2 = joblib.load("expenses.joblib")
 
 
 # 2. Set up your Streamlit app
@@ -57,18 +57,6 @@ def main():
 # Define your model prediction function here
 # For example:
 
-# We are going to use st.cache to improve performance for predictions.
-@st.cache_data
-def _singlePredict(input_text):
-    # Format the input_text so that you can pass it to the model
-    # For example:
-    # Call your model to make predictions on the input_text
-    # For example:
-    prediction = model.predict([[float(input_text)]])
-
-    # Make sure to return the prediction result
-    return prediction[0][0]
-
 @st.cache_data
 def _batchPredict(df):
     # Format the dataframe so that you can pass it to the model
@@ -77,7 +65,7 @@ def _batchPredict(df):
 
     # Call your model to make predictions on the dataframe
     # For example:
-    predictions = model.predict(df)
+    predictions = model2.predict(df)
 
     # Predictions DF
     dfPredictions = pd.DataFrame(predictions, columns=(["Monthly expenses"]))
