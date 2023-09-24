@@ -9,5 +9,5 @@ The elements we used were Kaggle, VS Code, and Juptyer Notebook.
 
 Group Members: Marikha Mehu, Isaura Ateku, Keta Patel, and Clarissa McCarthy
 
-Download testing.csv and test it into our app
+**Download testing.csv and test it into our app**
 
