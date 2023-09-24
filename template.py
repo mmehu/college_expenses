@@ -4,8 +4,8 @@ import pandas as pd
 import os
 
 # 1. Import your model and any necessary dependencies here
-if os.path.exists("expenses.joblib"):
-    model2 = joblib.load("expenses.joblib")
+if os.path.exists("expense.joblib"):
+    model2 = joblib.load("expense.joblib")
 
 
 # 2. Set up your Streamlit app
@@ -56,6 +56,18 @@ def main():
 
 # Define your model prediction function here
 # For example:
+
+# We are going to use st.cache to improve performance for predictions.
+@st.cache_data
+def _singlePredict(input_text):
+    # Format the input_text so that you can pass it to the model
+    # For example:
+    # Call your model to make predictions on the input_text
+    # For example:
+    prediction = model.predict([[float(input_text)]])
+
+    # Make sure to return the prediction result
+    return prediction[0][0]
 
 @st.cache_data
 def _batchPredict(df):
